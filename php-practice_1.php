@@ -32,7 +32,7 @@ else{
 // Q5 条件分岐-2 三項演算子
 $age = 27;
 
- echo ($age >= 18) ? '成人です。' : '未成年です。';
+echo ($age >= 18) ? '成人です。' : '未成年です。';
 
 // Q6 配列
 $deta = ['東京', '千葉', '埼玉', '栃木', '群馬', '茨城', '神奈川'];
@@ -46,14 +46,6 @@ foreach ($array as $key => $value){
   echo $value . "\n";
 }
 // Q8 連想配列-2
-
-/* $key = '埼玉';
-
-if ($key == '埼玉'){
-    echo '埼玉県の県庁所在地は、さいたま市です。';
-  }
-*/
-
 foreach ($array as $key => $value)
   {
     if ($key == '埼玉'){
@@ -74,7 +66,6 @@ foreach ($array2 as $key => $value){
 }
 
 // Q10 関数-1
-
 function hello($name){
   echo $name . '' . 'さん、こんにちは。' . "\n";
 }
