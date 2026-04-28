@@ -54,15 +54,16 @@ foreach ($array as $key => $value)
 }
 
 // Q9 連想配列-3
+$kanto = ['東京', '千葉', '埼玉', '栃木', '群馬', '茨城', '神奈川'];
 $array['鹿児島'] = '鹿児島';
 $array['熊本'] = '熊本';
 
 foreach ($array as $key => $value){
-    if ($key !== '東京' && $key !== '千葉' && $key !== '埼玉' && $key !== '栃木' && $key !== '群馬' && $key !== '茨城' && $key !== '神奈川'){
-        echo $key . 'は関東地方ではありません。' . "\n";
+    if (in_array($key, $kanto) ){
+      echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
     }
     else {
-      echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
+        echo $key . 'は関東地方ではありません。' . "\n";
     }
 }
 
