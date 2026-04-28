@@ -2,7 +2,7 @@
 // Q1 変数と文字列
 $name = '永野';
 
-echo '私の名前は' . $name . 'です。';
+echo '私の名前は「' . $name . '」です。';
 
 // Q2 四則演算
 $num = 5*4;
@@ -21,7 +21,7 @@ echo '現在時刻は、' . $date . 'です。';
 // Q4 条件分岐-1 if文
 $device = 'windows';
 
-if ($device == 'windows' || $device == 'mac'){
+if ($device === 'windows' || $device === 'mac'){
   echo '使用OSは' . $device . 'です。';
 }
 else{
@@ -48,16 +48,17 @@ foreach ($array as $key => $value){
 // Q8 連想配列-2
 foreach ($array as $key => $value)
   {
-    if ($key == '埼玉'){
+    if ($key === '埼玉'){
         echo '埼玉県の県庁所在地は、さいたま市です。';
     }
 }
 
 // Q9 連想配列-3
-$array2 = ['東京' => '新宿区', '千葉' => '千葉市', '埼玉' => 'さいたま市', '栃木' => '宇都宮市', '群馬' => '前橋市', '茨城' => '水戸市', '神奈川' => '横浜市', '鹿児島' => '鹿児島', '熊本' => '熊本'];
+$array['鹿児島'] = '鹿児島';
+$array['熊本'] = '熊本';
 
-foreach ($array2 as $key => $value){
-    if ($key == '鹿児島' || $key == '熊本'){
+foreach ($array as $key => $value){
+    if ($key !== '東京' && $key !== '千葉' && $key !== '埼玉' && $key !== '栃木' && $key !== '群馬' && $key !== '茨城' && $key !== '神奈川'){
         echo $key . 'は関東地方ではありません。' . "\n";
     }
     else {
@@ -70,8 +71,8 @@ function hello($name){
   echo $name . '' . 'さん、こんにちは。' . "\n";
 }
 
-hello ($name = '田中');
-hello ($name = '鈴木');
+hello ('田中');
+hello ('鈴木');
 
 // Q11 関数-2
 function calcTaxPrice($price){
