@@ -50,36 +50,45 @@ foreach ($personalInfos as $index => $info){
 var_dump($personalInfos);
 
 // Q3 オブジェクト-1
-class Student
-{
+class Student{
     public $studentId;
     public $studentName;
 
-    public function __construct($id, $name)
-    {
+    public function __construct($id, $name){
         $this->studentId = $id;
         $this->studentName = $name;
     }
 
-    public function attend()
-    {
+    public function attend(){
         echo '授業に出席しました。';
     }
 }
 
-$yamada->attend('PHP'); //Q4用の追記
 
 /* Q3の条件　studentIdプロパティは正の整数を設定してください。
 nameプロパティは任意の値を設定してください*/
-$yamada = new Student(120, '山田');
+
 
 echo '学籍番号' . $yamada->studentId . '番の生徒は' . $yamada->studentName . 'です。';
 
 // Q4 オブジェクト-2
 
-public function attend($curriculum){
-    echo $this->studentName . 'は' . $curriculum . 'の授業に参加しました。' . '学籍番号：' . $this->studentId;
+class Student{
+    public $studentId;
+    public $studentName;
+
+    public function __construct($id, $name){
+        $this->studentId = $id;
+        $this->studentName = $name;
+    }
+
+    public function attend($curriculum){
+        echo $this->studentName . 'は' . $curriculum . 'の授業に参加しました。' . '学籍番号：' . $this->studentId;
 }
+}
+
+$yamada = new Student(120, '山田');
+$yamada->attend('PHP');
 
 // Q5 定義済みクラス
 // 問題1
