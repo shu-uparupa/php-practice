@@ -1,25 +1,12 @@
 <?php
 // Q1 tic-tac問題
-class tic_tac {
-  public $tic;
-  public $tac;
-  public $tic_tac;
-
-  public function judge($num) {
-    $this->tic = $num % 4 === 0;
-    $this->tac = $num % 5 === 0;
-    $this->tic_tac = $num % 20 === 0;
-  }
-}
 
 for ($i = 1; $i <= 100; $i++) {
-  $game = new tic_tac();
-  $game->judge($i);
-  if ($game->tic_tac) {
+  if ($i % 4 == 0 && $i % 5 == 0) {
     echo "tic-tac" . "\n";
-  } elseif ($game->tic) {
+  } elseif ($i % 4 == 0) {
     echo "tic" . "\n";
-  } elseif ($game->tac) {
+  } elseif ($i % 5 == 0) {
     echo "tac" . "\n";
   } else {
     echo "$i" . "\n";
@@ -54,11 +41,13 @@ foreach ($personalInfos as $index => $info){
   echo ($index + 1) . '番目の' . $info['name'] . 'のメールアドレスは' . $info['mail'] .'で、電話番号は' . $info['tel'] . 'です。' . "\n";
 }
 // 問題3
-$ageList = [25, 30, 10];
+$ageList = [25, 30, 18];
 
 foreach ($personalInfos as $index => $info){
   $personalInfos[$index]['age'] = $ageList[$index];
 }
+
+var_dump($personalInfos);
 
 // Q3 オブジェクト-1
 class Student
