@@ -69,7 +69,7 @@ foreach ($array as $key => $value){
 
 // Q10 関数-1
 function hello($name){
-  echo $name . '' . 'さん、こんにちは。' . "\n";
+  echo $name . 'さん、こんにちは。' . "\n";
 }
 
 hello ('田中');
