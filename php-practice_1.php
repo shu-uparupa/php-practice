@@ -82,7 +82,9 @@ function calcTaxPrice($price){
 calcTaxPrice($price = 1000);
 
 // Q12 関数とif文
-/* function distinguishNum($num) {
+
+/*　最初に書いていた回答
+function distinguishNum($num) {
   echo ($num % 2 == 0) ? $num . 'は偶数です。' : $num . 'は奇数です。';
 }
 */
