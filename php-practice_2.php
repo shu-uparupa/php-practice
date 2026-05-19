@@ -15,21 +15,21 @@ for ($i = 1; $i <= 100; $i++) {
 
 // Q2 多次元連想配列
 $personalInfos = [
-    [
-        'name' => 'Aさん',
-        'mail' => 'aaa@mail.com',
-        'tel'  => '09011112222'
-    ],
-    [
-        'name' => 'Bさん',
-        'mail' => 'bbb@mail.com',
-        'tel'  => '08033334444'
-    ],
-    [
-        'name' => 'Cさん',
-        'mail' => 'ccc@mail.com',
-        'tel'  => '09055556666'
-    ],
+  [
+      'name' => 'Aさん',
+      'mail' => 'aaa@mail.com',
+      'tel'  => '09011112222'
+  ],
+  [
+      'name' => 'Bさん',
+      'mail' => 'bbb@mail.com',
+      'tel'  => '08033334444'
+  ],
+  [
+      'name' => 'Cさん',
+      'mail' => 'ccc@mail.com',
+      'tel'  => '09055556666'
+  ],
 ];
 
 var_dump($personalInfos);
@@ -51,17 +51,17 @@ var_dump($personalInfos);
 
 // Q3 オブジェクト-1
 class Student{
-    public $studentId;
-    public $studentName;
+  public $studentId;
+  public $studentName;
 
-    public function __construct($id, $name){
-        $this->studentId = $id;
-        $this->studentName = $name;
-    }
+  public function __construct($id, $name){
+    $this->studentId = $id;
+    $this->studentName = $name;
+  }
 
-    public function attend(){
-        echo '授業に出席しました。';
-    }
+  public function attend(){
+    echo '授業に出席しました。';
+  }
 }
 
 
@@ -74,17 +74,17 @@ echo '学籍番号' . $yamada->studentId . '番の生徒は' . $yamada->studentN
 // Q4 オブジェクト-2
 
 class Student{
-    public $studentId;
-    public $studentName;
+  public $studentId;
+  public $studentName;
 
-    public function __construct($id, $name){
-        $this->studentId = $id;
-        $this->studentName = $name;
-    }
+  public function __construct($id, $name){
+    $this->studentId = $id;
+    $this->studentName = $name;
+  }
 
-    public function attend($curriculum){
-        echo $this->studentName . 'は' . $curriculum . 'の授業に参加しました。' . '学籍番号：' . $this->studentId;
-}
+  public function attend($curriculum){
+    echo $this->studentName . 'は' . $curriculum . 'の授業に参加しました。' . '学籍番号：' . $this->studentId;
+  }
 }
 
 $yamada = new Student(120, '山田');

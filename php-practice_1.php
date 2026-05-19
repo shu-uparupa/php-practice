@@ -46,11 +46,10 @@ foreach ($array as $key => $value){
   echo $value . "\n";
 }
 // Q8 連想配列-2
-foreach ($array as $key => $value)
-  {
-    if ($key === '埼玉'){
-        echo '埼玉県の県庁所在地は、さいたま市です。';
-    }
+foreach ($array as $key => $value){
+  if ($key === '埼玉'){
+    echo '埼玉県の県庁所在地は、さいたま市です。';
+  }
 }
 
 // Q9 連想配列-3
@@ -59,12 +58,12 @@ $array['鹿児島'] = '鹿児島';
 $array['熊本'] = '熊本';
 
 foreach ($array as $key => $value){
-    if (in_array($key, $kanto) ){
-      echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
-    }
-    else {
-        echo $key . 'は関東地方ではありません。' . "\n";
-    }
+  if (in_array($key, $kanto) ){
+    echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
+  }
+  else {
+    echo $key . 'は関東地方ではありません。' . "\n";
+  }
 }
 
 // Q10 関数-1
@@ -83,12 +82,21 @@ function calcTaxPrice($price){
 calcTaxPrice($price = 1000);
 
 // Q12 関数とif文
-function distinguishNum($num) {
+/* function distinguishNum($num) {
   echo ($num % 2 == 0) ? $num . 'は偶数です。' : $num . 'は奇数です。';
 }
+*/
+function distinguishNum($num) {
+  if ($num % 2 === 0) {
+      return $num . 'は偶数です。' ;
+  }
+  else{
+      return $num . 'は奇数です。';
+  }
+}
 
-distinguishNum($num = 200);
-distinguishNum($num = 321);
+echo distinguishNum($num = 200);
+echo distinguishNum($num = 321);
 
 // Q13 関数とswitch文
 function evaluateGrade($score){
@@ -96,16 +104,16 @@ function evaluateGrade($score){
     case 'A':
     case 'B':
       echo '合格です。' . "\n";
-      break;
+    break;
     case 'C':
       echo '合格ですが追加課題がある。' . "\n";
-      break;
+    break;
     case 'D':
       echo '不合格です。' . "\n";
-      break;
+    break;
     default:
       echo '判定不明です。講師に問い合わせてください。' . "\n";
-      break;
+    break;
   }
 }
 
