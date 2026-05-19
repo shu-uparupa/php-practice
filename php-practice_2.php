@@ -97,7 +97,7 @@ $lastmonth->modify('-1 month');
 echo $lastmonth->format('Y-m-d');
 
 // 問題2
-$today = new DateTime('2026-4-29');
+$today = new DateTime('now');
 $thatday = new DateTime('1992-4-25');
 $interval = $today->diff($thatday);
 echo 'あの日から' . $interval->format('%a') . '日経過しました。';
